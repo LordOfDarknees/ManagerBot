@@ -2,8 +2,9 @@ from disnake import Intents, Status, Game
 from disnake.ext.commands import Bot
 from configparser import ConfigParser
 from sqlite3 import connect
+from config.configChecker import Check
 
-
+Check() # Check if Ini File is not existand or corrupt
 
 # Get Config
 config_path = "config.ini" # config directory
