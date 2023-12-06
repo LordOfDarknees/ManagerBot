@@ -6,12 +6,10 @@ class Check:
     def __init__(self):
         self.config = ConfigParser()
         self.bot_values = {'token': "", "prefix": "!", "database": "savefiles.db"}
-        self.test_values = {"ApiKey": "PLACEHOLDER IN DEFAULT"}
         # Just a small function to write the file
         
         if not exists('config.ini'):
             self.config['Bot'] = self.bot_values
-            self.config["CryptoAPI"] = self.test_values
             self.write_file()
         else:
             # Read File
@@ -29,7 +27,6 @@ class Check:
                 # setback to default to repair itself
                 logging.warn("Something seemed Corrupt in the config file Config file was reset")
                 self.config['Bot'] = self.bot_values
-                self.config["TestStuff"] = self.test_values
                 self.write_file()
 
     def write_file(self):
