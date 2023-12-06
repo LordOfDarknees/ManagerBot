@@ -5,7 +5,7 @@ import logging
 class Check:
     def __init__(self):
         self.config = ConfigParser()
-        self.bot_values = {'token': "MTE3OTg0MDk3NzU0NDk0OTg0Mg.Gv7DMm.gAbX446wWWgPuxlCYCViyZLvbEVa6gtzB1hJi8", "prefix": "!", "database": "savefiles.db"}
+        self.bot_values = {'token': "", "prefix": "!", "database": "savefiles.db"}
         self.test_values = {"ApiKey": "PLACEHOLDER IN DEFAULT"}
         # Just a small function to write the file
         
