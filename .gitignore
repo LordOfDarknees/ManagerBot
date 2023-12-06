@@ -1,0 +1,6 @@
+utilitys/__pycache__/OwnerCheck.cpython-312.pyc
+config/__pycache__/configChecker.cpython-312.pyc
+commands/__pycache__/stop.cpython-312.pyc
+commands/__pycache__/restart.cpython-312.pyc
+savefiles.db
+config.ini
