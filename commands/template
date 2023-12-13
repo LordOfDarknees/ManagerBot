@@ -1,10 +1,10 @@
 from disnake.ext.commands import Bot, Cog, slash_command
 from disnake import ApplicationCommandInteraction
-from pathlib import Path
-from sys import path
+from pathlib import Path # Needed for importing Modules from Siblings folder from parent
+from sys import path # Needed for importing Modules from Siblings folder from parent
 
-path_root = Path(__file__).parents[2]
-path.append(str(path_root))
+path_root = Path(__file__).parents[2] # Get the Folder 2 outside of current one
+path.append(str(path_root)) # Add the previos found folder to path to be able to import stuff from there
 
 from utilitys.OwnerCheck import Owner
 
