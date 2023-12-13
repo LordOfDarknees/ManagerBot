@@ -1,0 +1,23 @@
+from disnake.ext.commands import Bot, Cog, slash_command
+from disnake import ApplicationCommandInteraction
+from pathlib import Path
+from sys import path
+
+path_root = Path(__file__).parents[2]
+path.append(str(path_root))
+
+from utilitys.OwnerCheck import Owner
+
+class name(Cog):
+    def __init__(self, bot: Bot) -> None:
+        self.bot = bot
+    
+    @slash_command(description="Describstion")
+    async def name(self, interaction: ApplicationCommandInteraction):
+        if not await Owner().isOwner(self.bot, interaction.user.id):
+            await interaction.response.send_message("You are not a Owner!\nYou are not Permitted to use this command")
+            return
+
+
+def setup(bot: Bot) -> None:
+    bot.add_cog(name(bot))
