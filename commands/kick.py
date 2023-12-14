@@ -1,5 +1,4 @@
 from disnake.ext.commands import Bot, Cog, slash_command
-from disnake.ext.commands.errors import MemberNotFound
 from disnake.errors import Forbidden
 from disnake import ApplicationCommandInteraction, Member, Guild
 from pathlib import Path # Needed for importing Modules from Siblings folder from parent
