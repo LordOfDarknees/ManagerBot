@@ -52,12 +52,15 @@ async def on_ready():
     print(f"Discriminator: {bot.user.discriminator}")
     print(f"Displayname: {bot.user.display_name}")
     print(f"Global Name: {bot.user.global_name}")
-    print(f"Avatar URL: {bot.user.avatar.url}")
+    try:
+        print(f"Avatar URL: {bot.user.avatar.url}")
+    except AttributeError:
+        print("Avatar URL: None")
     
-
 
 bot.load_extension("commands.stop")
 bot.load_extension("commands.restart")
+bot.load_extension("commands.kick")
 
 if __name__ == "__main__":
     bot.run(bot_token)
