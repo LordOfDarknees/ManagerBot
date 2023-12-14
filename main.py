@@ -3,7 +3,7 @@ from disnake.ext.commands import Bot
 from configparser import ConfigParser
 from sqlite3 import connect
 from config.configChecker import Check
-import os
+from os import listdir
 
 Check() # Check if Ini File is not existand or corrupt
 
@@ -59,7 +59,7 @@ async def on_ready():
         print("Avatar URL: None")
     
 
-for filename in os.listdir("./commands"):
+for filename in listdir("./commands"):
     if filename.endswith(".py"):
         file = filename[:-3]
         bot.load_extension(f"commands.{file}")
