@@ -5,9 +5,6 @@ from sqlite3 import connect
 from config.configChecker import Check
 import os
 
-cogs = ["stop", "restart", "kick", "clear"]
-
-
 Check() # Check if Ini File is not existand or corrupt
 
 # Get Config
