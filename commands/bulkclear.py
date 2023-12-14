@@ -34,6 +34,7 @@ class bulkclear(Cog):
                 temp.append(entry)
             for entry in multiple:
                 await interaction.channel.purge()
+        await interaction.channel.purge(limit=number)
                 
         done_embed = Embed(title="bulkclear Command", description="Everything is done now!", color=Color.green())
         await interaction.edit_original_response(embed=done_embed)

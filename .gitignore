@@ -4,3 +4,6 @@ commands/__pycache__/stop.cpython-312.pyc
 commands/__pycache__/restart.cpython-312.pyc
 savefiles.db
 config.ini
+commands/__pycache__/bulkclear.cpython-312.pyc
+*.pyc
+__pycache__
